@@ -5,16 +5,16 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 2023,
 		sourceType: 'module',
-		project: false
+		project: false,
 	},
 	plugins: ['@typescript-eslint', 'prettier'],
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
-		'plugin:prettier/recommended'
+		'plugin:prettier/recommended',
 	],
 	rules: {
-		'prettier/prettier': 'warn'
+		'prettier/prettier': 'warn',
 	},
 	ignorePatterns: [
 		'dist/',
@@ -25,6 +25,6 @@ module.exports = {
 		'logs/',
 		'screenshots/',
 		'traces/',
-		'videos/'
-	]
+		'videos/',
+	],
 };

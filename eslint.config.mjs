@@ -14,8 +14,8 @@ export default [
 			'logs/**',
 			'screenshots/**',
 			'traces/**',
-			'videos/**'
-		]
+			'videos/**',
+		],
 	},
 	{
 		languageOptions: {
@@ -23,16 +23,16 @@ export default [
 			ecmaVersion: 2023,
 			globals: {
 				...globals.es2023,
-				...globals.node
-			}
-		}
+				...globals.node,
+			},
+		},
 	},
 	js.configs.recommended,
 	...tseslint.configs.recommended,
 	{
 		plugins: { prettier },
 		rules: {
-			'prettier/prettier': 'warn'
-		}
-	}
+			'prettier/prettier': 'warn',
+		},
+	},
 ];
