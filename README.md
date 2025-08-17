@@ -9,7 +9,7 @@ This repository contains a minimal, opinionated end‑to‑end (E2E) testing set
 
 ```
 pnpm install
-pnpm exec playwright install --with-deps
+pnpm run browsers:install
 ```
 
 - Run tests headless:
@@ -18,11 +18,21 @@ pnpm exec playwright install --with-deps
 pnpm test:e2e
 ```
 
+- Run in headed mode (Chromium):
+
+```
+pnpm test:headed
+```
+
 - Open the HTML report (after a run):
 
 ```
 pnpm test:report
 ```
+
+## CI
+
+- GitHub Actions workflow runs `pnpm run test:ci` with a GitHub reporter
 
 ## Project Structure
 
@@ -34,3 +44,8 @@ pnpm test:report
 
 - This project uses Prettier and ESLint with TypeScript rules
 - Artifacts (reports, videos, traces, screenshots) are ignored by git per `.gitignore`
+
+## Troubleshooting
+
+- If browsers are missing, run `pnpm run browsers:install`
+- On Linux, Playwright may need system packages; the `--with-deps` flag installs them automatically in CI

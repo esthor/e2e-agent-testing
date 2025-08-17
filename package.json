@@ -13,6 +13,8 @@
 		"test:e2e": "playwright test",
 		"test:headed": "playwright test --headed --project=chromium",
 		"test:report": "playwright show-report",
+		"test:ci": "playwright test --reporter=github",
+		"browsers:install": "playwright install --with-deps",
 		"lint": "eslint . --ext .ts,.tsx,.js",
 		"format": "prettier --write .",
 		"typecheck": "tsc -p tsconfig.json --noEmit",

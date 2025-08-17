@@ -10,6 +10,7 @@
 /screenshots
 /traces
 /videos
+/test-results
 
 # Editor/OS
 .DS_Store
