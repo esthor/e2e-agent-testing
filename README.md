@@ -48,4 +48,5 @@ pnpm test:report
 ## Troubleshooting
 
 - If browsers are missing, run `pnpm run browsers:install`
+- If `--with-deps` fails on your local OS, use `pnpm run browsers:install:local`
 - On Linux, Playwright may need system packages; the `--with-deps` flag installs them automatically in CI
