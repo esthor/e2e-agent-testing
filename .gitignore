@@ -12,6 +12,9 @@
 /videos
 /test-results
 
+# Env
+/.env
+
 # Editor/OS
 .DS_Store
 .idea/
