@@ -1,0 +1,9 @@
+dist/
+node_modules/
+reports/
+replays/
+artifacts/
+logs/
+screenshots/
+traces/
+videos/
