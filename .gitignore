@@ -1,5 +1,8 @@
+# Node
 /node_modules
 /dist
+
+# Playwright artifacts
 /reports
 /replays
 /artifacts
@@ -7,6 +10,12 @@
 /screenshots
 /traces
 /videos
-/screenshots
-/traces
-/videos
+/test-results
+
+# Env
+/.env
+
+# Editor/OS
+.DS_Store
+.idea/
+.vscode/

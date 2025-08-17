@@ -1,0 +1,51 @@
+{
+	"name": "e2e-agent-testing",
+	"version": "0.1.0",
+	"private": true,
+	"description": "E2E agent testing baseline with Playwright + TypeScript",
+	"license": "MIT",
+	"packageManager": "pnpm@10.11.1",
+	"engines": {
+		"node": ">=22.0.0",
+		"pnpm": ">=10.0.0"
+	},
+	"scripts": {
+		"test:e2e": "playwright test",
+		"test:headed": "playwright test --headed --project=chromium",
+		"test:report": "playwright show-report",
+		"test:ci": "playwright test --reporter=github",
+		"browsers:install": "playwright install --with-deps",
+		"browsers:install:local": "playwright install",
+		"lint": "eslint . --ext .ts,.tsx,.js",
+		"format": "prettier --write .",
+		"typecheck": "tsc -p tsconfig.json --noEmit",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"**/*.{ts,tsx,js,jsx}": [
+			"eslint --fix --max-warnings=0",
+			"prettier --write"
+		],
+		"**/*.{md,json,yml,yaml}": [
+			"prettier --write"
+		]
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.33.0",
+		"@playwright/test": "^1.54.2",
+		"@types/node": "^24.3.0",
+		"@typescript-eslint/eslint-plugin": "^8.39.1",
+		"@typescript-eslint/parser": "^8.39.1",
+		"dotenv": "^17.2.1",
+		"eslint": "^9.33.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-prettier": "^5.5.4",
+		"globals": "^16.3.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.5",
+		"prettier": "^3.6.2",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.9.2",
+		"typescript-eslint": "^8.39.1"
+	}
+}
