@@ -18,7 +18,15 @@ export default defineConfig({
 		screenshot: 'only-on-failure',
 	},
 	projects: [
-		{ name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+		{
+			name: 'chromium',
+			use: {
+				...devices['Desktop Chrome'],
+				launchOptions: {
+					args: ['--use-mock-keychain', '--password-store=basic', '--disable-notifications'],
+				},
+			},
+		},
 		{ name: 'firefox', use: { ...devices['Desktop Firefox'] } },
 		{ name: 'webkit', use: { ...devices['Desktop Safari'] } },
 	],
